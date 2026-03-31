@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Services | Dental Wellness Worli</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+        
+        html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
+        .luxury-font { font-family: 'Playfair Display', serif; }
+        
+        :root {
+            --bg-light: #F9F9F9;
+            --text-main: #1a365d;
+            --accent-brand: #2ecc71; 
+        }
+
+        body { background-color: var(--bg-light); color: var(--text-main); }
+
+        .treatment-card:hover .treatment-icon { transform: scale(1.1); color: var(--accent-brand); }
+        .hover-scale { transition: all 0.3s ease-in-out; }
+        .hover-scale:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border-color: var(--accent-brand); }
+        
+        .zoom-centre-logo { overflow: hidden; background-color: white; border: 1px solid #eee; }
+        .zoom-centre-logo img {
+            object-fit: contain; 
+            object-position: center;
+            transform: scale(1.1); 
+            width: 100%; height: 100%;
+        }
+        
+        #mobile-menu { 
+            display: none; 
+            transform-origin: top right; 
+            transition: all 0.2s ease-out; 
+            opacity: 0; 
+            transform: scale(0.95) translateY(-10px); 
+        }
+        #mobile-menu.active { 
+            display: block !important; 
+            opacity: 1; 
+            transform: scale(1) translateY(0); 
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="bg-white/95 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
+            <a href="index.html" class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full zoom-centre-logo shadow-sm">
+                    <img src="https://raw.githubusercontent.com/AnujAhinave/Dental-Wellness/main/logodentalclinic.png" alt="Dental Wellness Logo">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-xl tracking-tight uppercase text-gray-900 leading-none">
+                        Dental <span class="text-[#2ecc71]">Wellness</span>
+                    </span>
+                </div>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-gray-500">
+                <a href="index.html" class="hover:text-[#2ecc71] transition-colors">Home</a>
+                <a href="about.html" class="hover:text-[#2ecc71] transition-colors">Our Doctors</a>
+                <a href="treatments.html" class="text-[#2ecc71] border-b-2 border-[#2ecc71] pb-1">Services</a>
+                <a href="results.html" class="hover:text-[#2ecc71] transition-colors">Reviews</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html#booking" class="bg-[#1e293b] text-white px-6 py-2.5 rounded-md font-bold hover:bg-[#2ecc71] transition-colors text-xs uppercase tracking-widest shadow-lg">
+                    Book Visit
+                </a>
+                <button id="menu-btn" class="lg:hidden text-gray-900 focus:outline-none p-2 bg-gray-50 rounded-md">
+                    <i class="fas fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="absolute top-20 right-6 w-48 bg-white border border-gray-100 rounded-xl shadow-2xl p-2 z-[60]">
+                <div class="flex flex-col text-[11px] font-bold uppercase tracking-widest text-gray-600">
+                    <a href="index.html" class="hover:bg-gray-50 p-3 rounded-lg flex items-center gap-3"><i class="fas fa-home w-4"></i> Home</a>
+                    <a href="about.html" class="hover:bg-gray-50 p-3 rounded-lg flex items-center gap-3"><i class="fas fa-user-md w-4"></i> Doctors</a>
+                    <a href="treatments.html" class="hover:bg-gray-50 text-[#2ecc71] p-3 rounded-lg flex items-center gap-3"><i class="fas fa-list w-4"></i> Services</a>
+                    <a href="results.html" class="hover:bg-gray-50 p-3 rounded-lg flex items-center gap-3"><i class="fas fa-star w-4"></i> Stories</a>
+                    <div class="h-[1px] bg-gray-100 my-1"></div>
+                    <a href="index.html#booking" class="text-[#2ecc71] p-3 flex items-center gap-3"><i class="fas fa-calendar-check w-4"></i> Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-24 bg-[#0f172a] text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200')] opacity-10 bg-cover bg-center"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+                <span class="text-[#2ecc71] font-bold tracking-widest text-[10px] uppercase">Multi-Speciality Dental Care</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight uppercase tracking-tight luxury-font">
+                Dental <span class="text-[#2ecc71] italic">Treatments</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl font-light max-w-2xl mx-auto">
+                Transparent Pricing. State-of-the-art Clinical Solutions. Experience world-class oral healthcare in Worli.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-center gap-4 mb-16">
+            <h2 class="text-3xl font-extrabold text-gray-900 uppercase tracking-tight luxury-font">Standard & Preventive</h2>
+            <div class="h-[1px] flex-grow bg-gray-200"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100 treatment-card hover-scale flex flex-col">
+                <i class="fas fa-notes-medical text-[#2ecc71] text-3xl mb-6 transition treatment-icon"></i>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 uppercase tracking-tight">Consultation</h3>
+                <p class="text-gray-500 text-sm mb-6 leading-relaxed flex-grow">Full clinical examination including digital X-rays (if required) and a comprehensive treatment plan explanation.</p>
+                <div class="bg-[#F9F9F9] p-5 rounded-xl text-xs space-y-3 border border-gray-100 mt-auto">
+                    <div class="flex justify-between items-center border-b border-gray-200 pb-2 mb-2">
+                        <span class="uppercase font-bold text-gray-500 text-[10px] tracking-widest">Consultation Fee</span>
+                        <span class="text-lg font-extrabold text-[#2ecc71]">₹200</span>
+                    </div>
+                    <p class="flex justify-between uppercase font-bold text-gray-500"><span>Validity</span> <span class="text-gray-900">7 Days</span></p>
+                    <p class="flex justify-between uppercase font-bold text-gray-500"><span>Includes</span> <span class="text-gray-900">Digital Exam</span></p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100 treatment-card hover-scale flex flex-col">
+                <i class="fas fa-spray-can-sparkles text-[#2ecc71] text-3xl mb-6 transition treatment-icon"></i>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 uppercase tracking-tight">Cleaning & Polishing</h3>
+                <p class="text-gray-500 text-sm mb-6 leading-relaxed flex-grow">Ultrasonic scaling to remove plaque and tartar, followed by professional polishing for a stain-free smile.</p>
+                <div class="bg-[#F9F9F9] p-5 rounded-xl text-xs space-y-3 border border-gray-100 mt-auto">
+                    <div class="flex justify-between items-center border-b border-gray-200 pb-2 mb-2">
+                        <span class="uppercase font-bold text-gray-500 text-[10px] tracking-widest">Starting Price</span>
+                        <span class="text-lg font-extrabold text-[#2ecc71]">₹800+</span>
+                    </div>
+                    <p class="flex justify-between uppercase font-bold text-gray-500"><span>Duration</span> <span class="text-gray-900">30 Mins</span></p>
+                    <p class="flex justify-between uppercase font-bold text-gray-500"><span>Type</span> <span class="text-gray-900">Ultrasonic</span></p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100 treatment-card hover-scale flex flex-col">
+                <i class="fas fa-tooth text-[#2ecc71] text-3xl mb-6 transition treatment-icon"></i>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 uppercase tracking-tight">Painless Root Canal</h3>
+                <p class="text-gray-500 text-sm mb-6 leading-relaxed flex-grow">Save your natural teeth with single-sitting RCT using rotary technology. Completely painless execution.</p>
+                <div class="bg-[#F9F9F9] p-5 rounded-xl text-xs space-y-3 border border-gray-100 mt-auto">
+                    <div class="flex justify-between items-center border-b border-gray-200 pb-2 mb-2">
+                        <span class="uppercase font-bold text-gray-500 text-[10px] tracking-widest">Starting Price</span>
+                        <span class="text-lg font-extrabold text-[#2ecc71]">₹3500+</span>
+                    </div>
+                    <p class="flex justify-between uppercase font-bold text-gray-500"><span>Session</span> <span class="text-gray-900">Single Sitting</span></p>
+                    <p class="flex justify-between uppercase font-bold text-gray-500"><span>Equipment</span> <span class="text-gray-900">Rotary System</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#F9F9F9] border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-center gap-4 mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 uppercase tracking-tighter luxury-font">Prosthetics & Specialized</h2>
+                <div class="h-[1px] flex-grow bg-gray-200"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="flex flex-col sm:flex-row gap-8 p-8 md:p-10 bg-white rounded-3xl border border-gray-100 hover-scale shadow-sm">
+                    <div class="w-16 h-16 bg-[#F9F9F9] rounded-2xl flex items-center justify-center text-2xl text-[#2ecc71] shrink-0 border border-gray-100">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase tracking-tight luxury-font">Zirconia Crowns</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">High-strength, metal-free aesthetic crowns. Biocompatible and virtually indistinguishable from natural teeth.</p>
+                        <div class="mt-auto border-t border-gray-100 pt-4 flex justify-between items-end">
+                            <div>
+                                <span class="block text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-1">Warranty</span>
+                                <span class="text-sm font-bold text-gray-900">Up to 15 Years</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-1">Price Per Unit</span>
+                                <span class="text-xl font-extrabold text-[#2ecc71]">₹7500+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-8 p-8 md:p-10 bg-white rounded-3xl border border-gray-100 hover-scale shadow-sm">
+                    <div class="w-16 h-16 bg-[#F9F9F9] rounded-2xl flex items-center justify-center text-2xl text-[#2ecc71] shrink-0 border border-gray-100">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <div class="flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase tracking-tight luxury-font">Dental Implants</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Permanent titanium roots for missing teeth. Restore full chewing function and prevent bone loss.</p>
+                        <div class="mt-auto border-t border-gray-100 pt-4 flex justify-between items-end">
+                            <div>
+                                <span class="block text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-1">Technique</span>
+                                <span class="text-sm font-bold text-gray-900">Life-long</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-1">Starting From</span>
+                                <span class="text-xl font-extrabold text-[#2ecc71]">₹25000+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-400 text-xs italic mt-8">* Prices are indicative. Final cost depends on complexity and choice of material.</p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl font-extrabold text-gray-900 uppercase tracking-tight text-center mb-12">Patient Information</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-[#2ecc71] mx-auto mb-4 text-xl">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2 text-sm uppercase tracking-widest">Consultation</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">₹200 includes primary exam and treatment planning.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-[#2ecc71] mx-auto mb-4 text-xl">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2 text-sm uppercase tracking-widest">Sterilization</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">International safety protocols (Autoclave) for 100% patient protection.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-[#2ecc71] mx-auto mb-4 text-xl">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2 text-sm uppercase tracking-widest">Payments</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">We accept UPI, Cards, and offer easy EMI for major treatments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 bg-[#050505] text-white text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-4xl font-extrabold mb-6 uppercase tracking-tight luxury-font">Ready for a healthier smile?</h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="index.html#booking" class="bg-[#2ecc71] text-white px-10 py-4 rounded-md font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors shadow-lg text-sm">
+                    Book Your Appointment
+                </a>
+                <a href="tel:7066232923" class="border-2 border-white/20 px-10 py-4 rounded-md font-bold uppercase tracking-widest hover:bg-white/10 transition text-sm flex items-center justify-center gap-2">
+                    <i class="fas fa-phone-alt"></i> 70662 32923
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('active');
+            if (mobileMenu.classList.contains('active')) {
+                menuIcon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                menuIcon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                menuIcon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>

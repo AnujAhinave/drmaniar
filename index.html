@@ -65,11 +65,11 @@
             <a href="index.html" class="hover:text-[#1e40af] transition-colors">Home</a>
             <a href="about.html" class="hover:text-[#1e40af] transition-colors">About Doctor</a>
             <a href="treatments.html" class="hover:text-[#1e40af] transition-colors">Expertise</a>
-            <a href="results.html" class="hover:text-[#1e40af] transition-colors">Smile Stories</a>
+            <a href="results.html" class="hover:text-[#1e40af] transition-colors">patient experience</a>
         </div>
 
         <div class="flex items-center gap-3">
-            <a href="index.html#booking" class="bg-[#1e293b] text-white px-6 py-2.5 rounded-md font-bold hover:bg-[#1e40af] transition-colors text-xs uppercase tracking-widest shadow-lg">Book Visit</a>
+            <a href="#booking" class="bg-[#1e293b] text-white px-6 py-2.5 rounded-md font-bold hover:bg-[#1e40af] transition-colors text-xs uppercase tracking-widest shadow-lg">Book Visit</a>
             <button id="menu-btn" class="lg:hidden text-gray-900 focus:outline-none p-2 bg-gray-50 rounded-md">
                 <i class="fas fa-bars text-xl" id="menu-icon"></i>
             </button>
@@ -82,7 +82,7 @@
                 <a href="treatments.html" class="hover:bg-gray-50 hover:text-[#1e40af] p-3 rounded-lg flex items-center gap-3"><i class="fas fa-stethoscope w-4"></i> Expertise</a>
                 <a href="results.html" class="hover:bg-gray-50 hover:text-[#1e40af] p-3 rounded-lg flex items-center gap-3"><i class="fas fa-star w-4"></i> Stories</a>
                 <div class="h-[1px] bg-gray-100 my-1"></div>
-                <a href="index.html#booking" class="text-[#1e40af] p-3 flex items-center gap-3"><i class="fas fa-calendar-check w-4"></i> Book Now</a>
+                <a href="#booking" class="text-[#1e40af] p-3 flex items-center gap-3"><i class="fas fa-calendar-check w-4"></i> Book Now</a>
             </div>
         </div>
     </div>
@@ -163,82 +163,128 @@
     </div>
 </section>
 
-<section id="consult" class="py-24 bg-slate-900 text-white rounded-[4rem] mx-4 md:mx-10 my-10 relative overflow-hidden scroll-mt-20">
-    <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
-        <h2 class="text-3xl md:text-5xl font-extrabold mb-12 uppercase tracking-tight">When Should You Seek Advice?</h2>
-        <div class="space-y-6 text-slate-300 text-lg md:text-xl font-medium">
-            <p class="flex items-center justify-center gap-4"><i class="fas fa-check-circle text-blue-400"></i> You’ve recently been diagnosed and need clarity</p>
-            <p class="flex items-center justify-center gap-4"><i class="fas fa-check-circle text-blue-400"></i> Your current treatment is not giving expected results</p>
-            <p class="flex items-center justify-center gap-4"><i class="fas fa-check-circle text-blue-400"></i> You want a second opinion before making a decision</p>
-            <p class="flex items-center justify-center gap-4"><i class="fas fa-check-circle text-blue-400"></i> You prefer a completely private and experienced consultation</p>
-        </div>
-    </div>
-</section>
 
-<section id="academic" class="py-24 bg-white scroll-mt-20">
-    <div class="max-w-7xl mx-auto px-6">
+<section id="consult" class="py-24 bg-[#0f172a] scroll-mt-20">
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
-            <span class="text-[#1e40af] font-bold text-xs uppercase tracking-[0.3em]">Evidence-Based Excellence</span>
-            <h2 class="text-4xl md:text-5xl font-extrabold mt-4 text-slate-900 uppercase">Credentials & Honors</h2>
+            <h2 class="text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white">
+                When Should You <span class="text-[#1e40af]">Seek Advice?</span>
+            </h2>
+            <p class="text-slate-500 mt-4 uppercase tracking-[0.3em] text-[10px] font-bold">Clinical Clarity for Complex Cases</p>
         </div>
-        <div class="grid lg:grid-cols-3 gap-8 items-start">
-            <div class="lg:col-span-1 bg-[#1e40af] text-white p-10 rounded-[3rem] shadow-2xl">
-                <h3 class="text-2xl font-bold mb-6 uppercase">Awards</h3>
-                <ul class="space-y-4 opacity-90 text-sm font-medium">
-                    <li><i class="fas fa-award mr-2 text-blue-200"></i> Lifetime Achievement Award</li>
-                    <li><i class="fas fa-award mr-2 text-blue-200"></i> Pioneering Work in HIV/AIDS</li>
-                    <li><i class="fas fa-award mr-2 text-blue-200"></i> 12+ Major Global Honors</li>
-                </ul>
-            </div>
-            <div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
-                <div class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100">
-                    <h4 class="text-[#1e40af] font-black text-xs uppercase mb-4">Lead Architect</h4>
-                    <p class="text-slate-800 font-bold text-lg leading-tight">National HIV Guidelines (NACO)</p>
-                    <p class="text-slate-500 text-xs mt-2">Authored clinical standards for the Ministry of Health, India.</p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="group bg-[#1e293b]/50 p-8 rounded-3xl border border-white/5 hover:border-[#1e40af] transition-all duration-300">
+                <div class="flex items-start gap-5">
+                    <div class="w-12 h-12 rounded-xl bg-[#1e40af]/10 flex items-center justify-center shrink-0 group-hover:bg-[#1e40af] transition-colors">
+                        <i class="fas fa-notes-medical text-[#1e40af] group-hover:text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm uppercase tracking-widest mb-2">New Diagnosis</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed font-medium">You’ve recently been diagnosed and need immediate clinical clarity and a roadmap for the future.</p>
+                    </div>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100">
-                    <h4 class="text-[#1e40af] font-black text-xs uppercase mb-4">Global Faculty</h4>
-                    <p class="text-slate-800 font-bold text-lg leading-tight">Visiting Professor - UTMB Texas, USA</p>
-                    <p class="text-slate-500 text-xs mt-2">Recognized internationally for academic contributions.</p>
+            </div>
+
+            <div class="group bg-[#1e293b]/50 p-8 rounded-3xl border border-white/5 hover:border-[#1e40af] transition-all duration-300">
+                <div class="flex items-start gap-5">
+                    <div class="w-12 h-12 rounded-xl bg-[#1e40af]/10 flex items-center justify-center shrink-0 group-hover:bg-[#1e40af] transition-colors">
+                        <i class="fas fa-chart-line text-[#1e40af] group-hover:text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm uppercase tracking-widest mb-2">Treatment Review</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed font-medium">Your current treatment is not giving expected results or your viral load is not suppressing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group bg-[#1e293b]/50 p-8 rounded-3xl border border-white/5 hover:border-[#1e40af] transition-all duration-300">
+                <div class="flex items-start gap-5">
+                    <div class="w-12 h-12 rounded-xl bg-[#1e40af]/10 flex items-center justify-center shrink-0 group-hover:bg-[#1e40af] transition-colors">
+                        <i class="fas fa-user-md text-[#1e40af] group-hover:text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm uppercase tracking-widest mb-2">Second Opinion</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed font-medium">You want an expert second opinion from a national lead before making major medical decisions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group bg-[#1e293b]/50 p-8 rounded-3xl border border-white/5 hover:border-[#1e40af] transition-all duration-300">
+                <div class="flex items-start gap-5">
+                    <div class="w-12 h-12 rounded-xl bg-[#1e40af]/10 flex items-center justify-center shrink-0 group-hover:bg-[#1e40af] transition-colors">
+                        <i class="fas fa-user-shield text-[#1e40af] group-hover:text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm uppercase tracking-widest mb-2">Elite Privacy</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed font-medium">You prefer a completely private, discreet, and highly experienced consultation environment.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="booking" class="py-24 bg-[#0f172a] scroll-mt-20">
+
+<section id="booking" class="py-24 bg-[#0f172a] border-t border-white/5 scroll-mt-20">
     <div class="max-w-3xl mx-auto px-6">
-        <div class="bg-[#1e293b] rounded-2xl border border-white/10 p-10 shadow-2xl">
-            <h3 class="text-3xl font-extrabold text-white text-center uppercase mb-10 tracking-tight">
-                Request <span class="text-[#1e40af]">Consultation</span>
-            </h3>
-            <form id="clinic-booking-form" class="grid grid-cols-1 gap-6">
-                <input type="text" placeholder="PATIENT NAME / INITIALS" required 
-                       class="w-full bg-[#334155] border border-transparent rounded-lg px-6 py-4 text-white focus:border-[#1e40af] outline-none transition uppercase text-[10px] font-bold tracking-widest placeholder:text-gray-400">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="tel" placeholder="MOBILE NUMBER" required 
-                           class="w-full bg-[#334155] border border-transparent rounded-lg px-6 py-4 text-white focus:border-[#1e40af] outline-none transition uppercase text-[10px] font-bold tracking-widest placeholder:text-gray-400">
-                    <select required class="w-full bg-[#334155] text-gray-400 rounded-lg px-6 py-4 outline-none uppercase text-[10px] font-bold tracking-widest border border-transparent focus:border-[#1e40af]">
-                        <option value="">SELECT CONCERN</option>
-                        <option>Recently Diagnosed</option>
-                        <option>Treatment Resistance</option>
-                        <option>Discordant Couple Guidance</option>
-                    </select>
-                </div>
-                <button type="submit" class="w-full bg-[#1e40af] text-white font-bold py-5 rounded-lg hover:bg-white hover:text-black transition-all uppercase mt-4 tracking-widest text-xs">
-                    Confirm Private Visit
-                </button>
-            </form>
+        <div class="bg-[#1e293b] rounded-[2.5rem] border border-white/10 p-10 shadow-2xl relative overflow-hidden">
+            
+            <div id="booking-form-wrapper" class="w-full">
+                <h3 class="text-3xl font-extrabold text-white text-center uppercase mb-10 tracking-tight">
+                    Request <span class="text-[#1e40af]">Consultation</span>
+                </h3>
+                <form id="clinic-booking-form" class="grid grid-cols-1 gap-6">
+                    <input type="text" placeholder="PATIENT NAME / INITIALS" required 
+                           class="w-full bg-[#0f172a] border border-white/5 rounded-xl px-6 py-4 text-white focus:border-[#1e40af] outline-none transition uppercase text-[10px] font-bold tracking-widest">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="tel" placeholder="MOBILE NUMBER" required 
+                               class="w-full bg-[#0f172a] border border-white/5 rounded-xl px-6 py-4 text-white focus:border-[#1e40af] outline-none transition uppercase text-[10px] font-bold tracking-widest">
+                        
+                        <select required class="w-full bg-[#0f172a] text-gray-400 border border-white/5 rounded-xl px-6 py-4 outline-none uppercase text-[10px] font-bold tracking-widest focus:border-[#1e40af]">
+                            <option value="">SELECT CONCERN</option>
+                            <option>Recently Diagnosed</option>
+                            <option>Treatment Resistance</option>
+                            <option>Discordant Couple Guidance</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-[#1e40af] text-white font-bold py-5 rounded-xl hover:bg-white hover:text-[#0f172a] transition-all uppercase mt-4 tracking-widest text-xs">
+                        Confirm Private Visit
+                    </button>
+                </form>
+            </div>
+
+           <div id="thank-you-page" style="display: none;" class="text-center py-10">
+    
+    <div class="w-20 h-20 bg-[#1e40af]/20 text-[#1e40af] rounded-full flex items-center justify-center text-4xl mx-auto mb-6">
+        <i class="fas fa-check"></i>
+    </div>
+
+    <h3 class="text-3xl font-extrabold text-white tracking-tight">
+        Your Request Has Been Received
+    </h3>
+
+    <p class="text-slate-300 mt-4 text-sm leading-relaxed max-w-md mx-auto">
+        Our team will contact you shortly to schedule your consultation. 
+        All information shared is kept strictly confidential.
+    </p>
+
+    <p class="text-xs text-slate-400 mt-3">
+        We understand the sensitivity of your situation and handle every case with complete privacy.
+    </p>
+
+</div>
+
         </div>
     </div>
 </section>
 <section id="reviews" class="py-24 bg-[#F9F9F9] border-y border-gray-100 scroll-mt-20">
     <div class="max-w-6xl mx-auto px-6 mb-10 text-center">
-        <h2 class="text-3xl md:text-4xl section-title text-gray-900">Patiesnts thoughts</h2>
+        <h2 class="text-3xl md:text-4xl section-title text-gray-900">Patients thoughts</h2>
         <p class="text-gray-500 mt-3 text-sm">Trusted by thousands for ethical and transparent medical care</p>
     </div>
-    
-    
     
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="p-8 text-center bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col justify-center hover-scale">
@@ -255,12 +301,9 @@
             <div class="flex justify-center text-[#1e40af] mb-3 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
             <p class="text-gray-600 text-sm italic mb-4">"Excellent experience with discordant couple counseling. We now have a clear path forward for our family planning."</p>
             <h4 class="font-bold text-xs uppercase tracking-widest text-gray-900">— Counseling Visit</h4>
-            
         </div>
-        
     </div>
-    </section>
-      
+</section>
 
 
 <footer class="bg-[#050505] text-gray-400 py-16 border-t border-white/5">
@@ -270,14 +313,12 @@
             <p class="text-sm leading-relaxed mb-4">Grant Road Clinic, Near Station, Grant Road (East), Mumbai, Maharashtra 400007</p>
             <a href="mailto:consult@drmaniar.com" class="text-lg font-bold text-white hover:text-[#1e40af] transition underline decoration-blue-500">consult@drmaniar.com</a>
         </div>
-
         <div>
             <h3 class="font-bold text-sm mb-4 uppercase tracking-widest text-white">Clinic Hours</h3>
             <p class="text-sm mb-1">Morning: 10 AM - 02 PM</p>
             <p class="text-sm mb-1">Evening: 05 PM - 09 PM</p>
             <p class="text-[#1e40af] font-bold text-xs uppercase tracking-widest mt-2">Closed on Sundays</p>
         </div>
-
         <div>
             <h3 class="font-bold text-sm mb-4 uppercase tracking-widest text-white">Confidentiality</h3>
             <p class="text-xs leading-relaxed">All consultations follow strict national clinical standards for privacy and data protection.</p>
@@ -287,22 +328,12 @@
                 <i class="fas fa-file-medical text-blue-500"></i>
             </div>
         </div>
-
         <div>
-        <div class="w-full h-40 rounded-xl overflow-hidden border border-white/10 transition-all duration-500 shadow-2xl">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5242.835733606613!2d72.8248549763301!3d18.946329056028212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce1f669e4ec7%3A0x74b4a278c9b95446!2sJk%20Maniar%20Clinic!5e1!3m2!1sen!2sin!4v1776344247801!5m2!1sen!2sin" 
-        width="100%" 
-        height="100%" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
+            <div class="w-full h-40 rounded-xl overflow-hidden border border-white/10 shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5242.835733606613!2d72.8248549763301!3d18.946329056028212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce1f669e4ec7%3A0x74b4a278c9b95446!2sJk%20Maniar%20Clinic!5e1!3m2!1sen!2sin!4v1776344247801!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
     </div>
-
     <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-[9px] uppercase tracking-[0.2em]">© 2026 DR. J.K. MANIAR. ALL RIGHTS RESERVED.</p>
         <p class="text-[9px] uppercase tracking-[0.2em]">DESIGNED BY <span class="text-blue-500">COLDVERT</span></p>
@@ -310,36 +341,41 @@
 </footer>
 
 <script>
+    // 1. Unified Mobile Menu Logic
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
 
-    menuBtn.addEventListener('click', (e) => {
+    menuBtn?.addEventListener('click', (e) => {
         e.stopPropagation();
-        mobileMenu.classList.toggle('active');
-        if (mobileMenu.classList.contains('active')) {
-            menuIcon.classList.replace('fa-bars', 'fa-times');
-        } else {
-            menuIcon.classList.replace('fa-times', 'fa-bars');
-        }
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-            mobileMenu.classList.remove('active');
-            menuIcon.classList.replace('fa-times', 'fa-bars');
-        }
-    });
-</script>
-
-</body>
-</html>
-
-<script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn?.addEventListener('click', () => {
         mobileMenu?.classList.toggle('active');
+        if (mobileMenu?.classList.contains('active')) {
+            menuIcon?.classList.replace('fa-bars', 'fa-times');
+        } else {
+            menuIcon?.classList.replace('fa-times', 'fa-bars');
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu?.contains(e.target) && !menuBtn?.contains(e.target)) {
+            mobileMenu?.classList.remove('active');
+            menuIcon?.classList.replace('fa-times', 'fa-bars');
+        }
+    });
+
+    // 2. Integrated Form Logic
+    document.getElementById('clinic-booking-form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formWrapper = document.getElementById('booking-form-wrapper');
+        const thankYouPage = document.getElementById('thank-you-page');
+        
+        if (formWrapper && thankYouPage) {
+            formWrapper.style.display = 'none';
+            thankYouPage.style.display = 'block';
+            // Smoothly center the thank you message in view
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
     });
 </script>
 

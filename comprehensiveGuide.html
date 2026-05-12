@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Dr. Janak Maniar | Confidential HIV Excellence & Care</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & ROOT ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --ink:#0D1117;
+  --ink-mid:#1C2331;
+  --ink-soft:#2D3748;
+  --cream:#FAF8F3;
+  --cream2:#F2EDE4;
+  --cream3:#E8E0D2;
+  --teal:#1A8C78;
+  --teal-light:#2AB89E;
+  --teal-pale:#E6F4F1;
+  --gold:#B08D57;
+  --gold-pale:#F5EDD8;
+  --muted:#7A8094;
+  --rule:rgba(13,17,23,0.1);
+  --serif:'Lora',Georgia,serif;
+  --display:'Cinzel',serif;
+  --sans:'Jost',sans-serif;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;width:100%}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--cream2)}
+::-webkit-scrollbar-thumb{background:var(--teal)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto;display:block}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(250,248,243,0.97);
+  border-bottom:1px solid var(--rule);
+  backdrop-filter:blur(12px);
+  height:76px;
+  display:flex;align-items:center;
+}
+.nav-wrap{
+  max-width:1280px;margin:0 auto;padding:0 24px;width:100%;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.nav-logo{display:flex;flex-direction:column;gap:3px}
+.nav-name{
+  font-family:var(--display);font-size:14px;font-weight:500;
+  letter-spacing:0.1em;color:var(--ink);text-transform:uppercase;line-height:1;
+}
+.nav-sub{font-size:7px;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);font-weight:400;font-family:var(--sans)}
+.nav-btns{display:flex;align-items:center;gap:8px}
+.nav-wa{
+  display:flex;align-items:center;gap:7px;background:#22c55e;color:#fff;
+  padding:8px 14px;border-radius:3px;font-size:11px;font-weight:500;
+  letter-spacing:0.05em;text-transform:uppercase;transition:all .2s;
+}
+.nav-call{
+  display:flex;align-items:center;gap:7px;background:var(--ink);color:#fff;
+  padding:8px 14px;border-radius:3px;font-size:11px;font-weight:400;
+  letter-spacing:0.05em;text-transform:uppercase;border:1px solid var(--ink);transition:all .2s;
+}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;background:var(--ink);padding-top:76px;
+  position:relative;overflow:hidden;display:flex;align-items:center;
+}
+.hero-texture{
+  position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(255,255,255,0.018) 79px,rgba(255,255,255,0.018) 80px),
+    repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(255,255,255,0.018) 79px,rgba(255,255,255,0.018) 80px);
+}
+.hero-glow{
+  position:absolute;width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(26,140,120,0.15) 0%,transparent 70%);
+  right:-50px;top:20%;pointer-events:none;
+}
+.hero-wrap{
+  max-width:1280px;margin:0 auto;padding:60px 24px;width:100%;
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--teal-light);font-family:var(--sans);font-weight:500;
+  margin-bottom:30px;border-bottom:1px solid rgba(42,184,158,0.25);padding-bottom:12px;
+}
+.hero-dot{
+  width:6px;height:6px;border-radius:50%;background:var(--teal-light);
+  animation:blink 2.4s ease-in-out infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero-h1{
+  font-family:var(--serif);font-size:clamp(32px,8vw,72px);font-weight:400;
+  color:#fff;line-height:1.2;letter-spacing:-0.01em;margin-bottom:24px;
+}
+.hero-h1 em{font-style:italic;color:var(--teal-light)}
+.hero-p{
+  font-size:15px;color:rgba(255,255,255,0.6);line-height:1.7;
+  font-weight:300;max-width:520px;margin-bottom:40px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--teal);color:#fff;padding:16px 28px;border-radius:4px;
+  font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;
+  transition:all .25s;font-family:var(--sans);
+}
+.btn-outline{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:transparent;color:rgba(255,255,255,0.8);padding:16px 28px;border-radius:4px;
+  font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;
+  border:1px solid rgba(255,255,255,0.2);transition:all .25s;font-family:var(--sans);
+}
+.hero-card{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);
+  border-radius:8px;overflow:hidden;width:100%;
+}
+.hero-portrait{
+  aspect-ratio:4/5;
+  background:linear-gradient(150deg,rgba(26,140,120,0.15),rgba(13,17,23,0.9));
+  position:relative;width:100%;
+}
+.hero-portrait img{width:100%;height:100%;object-fit:cover;object-position:top}
+.portrait-label{
+  font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+  color:rgba(255,255,255,0.7);font-family:var(--sans);
+  position:absolute;bottom:60px;left:20px;z-index:2;
+}
+.portrait-quote{
+  position:absolute;bottom:0;left:0;right:0;
+  background:rgba(13,17,23,0.8);backdrop-filter:blur(5px);padding:15px;
+  font-family:var(--serif);font-style:italic;font-size:11px;
+  color:var(--gold-pale);text-align:center;line-height:1.4;z-index:2;
+}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.06)}
+.hstat{background:rgba(13,17,23,0.85);padding:20px}
+.hstat-n{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--gold);line-height:1;margin-bottom:8px}
+.hstat-l{font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);line-height:1.4;font-weight:400}
+
+/* ── CREDIBILITY ── */
+#credibility{
+  background:var(--cream);border-bottom:1px solid var(--rule);padding:60px 24px;
+}
+.cred-wrap{max-width:1280px;margin:0 auto}
+.cred-label{
+  font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;text-align:center;margin-bottom:40px;
+}
+.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cred-item{background:white;padding:32px;border-radius:4px;box-shadow:0 2px 10px rgba(0,0,0,0.03)}
+.cred-ico{
+  width:40px;height:40px;border-radius:3px;background:var(--ink);
+  display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--gold);
+}
+.cred-t{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:12px}
+.cred-p{font-size:14px;color:var(--ink-soft);line-height:1.6;font-family:var(--serif)}
+
+/* ── PROMISE ── */
+#promise{background:var(--ink-mid);padding:80px 24px;position:relative;overflow:hidden}
+.promise-wrap{max-width:960px;margin:0 auto;position:relative;z-index:2}
+.promise-chip{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--teal-light);font-weight:500;margin-bottom:30px;
+}
+.promise-q{
+  font-family:var(--serif);font-size:clamp(20px,4vw,34px);
+  font-weight:400;font-style:italic;color:#fff;line-height:1.5;margin-bottom:40px;
+}
+.promise-q strong{font-style:normal;color:var(--teal-light);font-weight:500}
+.promise-body{
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px;
+  border-top:1px solid rgba(255,255,255,0.06);padding-top:32px;
+}
+.promise-pp{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;font-weight:300}
+.promise-author{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-family:var(--sans)}
+
+/* ── SERVICES ── */
+#services{background:var(--ink);padding:80px 24px}
+.services-wrap{max-width:1280px;margin:0 auto}
+.services-head{margin-bottom:40px;border-left:3px solid var(--teal);padding-left:20px}
+.services-head .eyebrow{color:var(--gold);font-size:10px;text-transform:uppercase;letter-spacing:0.25em;margin-bottom:8px;font-weight:600}
+.services-head h2{font-family:var(--serif);font-size:clamp(30px,7vw,44px);font-weight:400;color:#fff;line-height:1.2}
+.services-head h2 em{font-style:italic;color:var(--teal-light)}
+.svc-grid{display:flex;flex-direction:column;gap:20px}
+.svc-card{background:rgba(255,255,255,0.04);padding:30px;border-radius:8px;border:1px solid rgba(255,255,255,0.1)}
+.svc-card-header{display:flex;align-items:center;gap:15px;margin-bottom:20px}
+.svc-num{font-family:var(--display);color:var(--gold);font-size:20px;opacity:0.8}
+.svc-t{
+  font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--teal-light);
+  font-weight:600;border-bottom:1px solid rgba(42,184,158,0.3);padding-bottom:4px;width:100%;
+}
+.svc-list{list-style:none;padding:0}
+.svc-list li{color:rgba(255,255,255,0.8);font-size:15px;margin-bottom:12px;display:flex;align-items:flex-start;gap:10px}
+.svc-list li:last-child{margin-bottom:0}
+.svc-list li span{color:var(--teal-light)}
+
+/* ── OUTCOMES ── */
+#outcomes{
+  background:var(--cream);padding:104px 40px;
+  position:relative;overflow:hidden;
+}
+#outcomes::before{
+  content:'';position:absolute;right:0;top:0;bottom:0;width:35%;
+  background:var(--cream2);clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);pointer-events:none;
+}
+.outcomes-wrap{max-width:1280px;margin:0 auto;position:relative;z-index:2}
+.outcomes-head{max-width:640px;margin-bottom:72px}
+.outcomes-head .eyebrow{
+  font-size:9px;letter-spacing:0.28em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;margin-bottom:20px;font-family:var(--sans);
+}
+.outcomes-head h2{
+  font-family:var(--serif);font-size:clamp(30px,3.5vw,50px);
+  font-weight:400;color:var(--ink);line-height:1.15;
+}
+.outcomes-head h2 em{font-style:italic;color:var(--teal)}
+.outcomes-rule{width:64px;height:2px;background:rgba(26,140,120,0.3);margin-top:24px}
+.outcomes-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.outcome-item{padding:40px 0;border-bottom:1px solid var(--rule);display:flex;gap:28px;align-items:flex-start}
+.outcome-item:nth-child(odd){padding-right:64px;border-right:1px solid var(--rule)}
+.outcome-item:nth-child(even){padding-left:64px}
+.outcome-item:nth-last-child(-n+2){border-bottom:none}
+/* High-contrast outcome numbers */
+.o-num{
+  width:54px;height:54px;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  background:var(--ink);border:1px solid var(--ink);border-radius:4px;
+  color:#FFFFFF !important;font-family:var(--sans);font-size:20px;font-weight:700;
+  transition:all 0.3s ease;
+}
+.outcome-item:hover .o-num{background:var(--teal);border-color:var(--teal);color:#FFFFFF !important;transform:translateY(-2px)}
+.o-title{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink);font-weight:500;margin-bottom:10px;font-family:var(--sans)}
+.o-text{font-size:14px;color:var(--muted);line-height:1.8;font-weight:300;font-family:var(--serif)}
+
+/* ── COMMITMENT ── */
+#commitment{background:var(--cream2);padding:96px 40px;border-bottom:1px solid var(--rule)}
+.commit-wrap{max-width:800px;margin:0 auto}
+.commit-head{
+  font-size:9px;letter-spacing:0.28em;text-transform:uppercase;color:var(--teal);
+  font-weight:500;margin-bottom:44px;font-family:var(--sans);
+  display:flex;align-items:center;gap:14px;
+}
+.commit-head::after{content:'';flex:1;height:1px;background:rgba(26,140,120,0.2);max-width:80px}
+.commit-q{
+  font-family:var(--serif);font-style:italic;font-size:clamp(17px,2.2vw,26px);
+  color:var(--ink);line-height:1.7;margin-bottom:40px;
+}
+.commit-q b{font-style:normal;color:var(--teal);font-weight:500}
+.commit-sig{display:flex;align-items:center;gap:16px}
+.commit-line{width:40px;height:1px;background:var(--teal);opacity:0.5}
+.commit-author{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);font-weight:500;font-family:var(--sans)}
+
+/* ── VISIT ── */
+#visit{background:var(--cream2);padding:80px 24px}
+.visit-wrap{max-width:1280px;margin:0 auto}
+.visit-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.visit-h{font-family:var(--serif);font-size:32px;margin-bottom:30px}
+.visit-map{height:350px;border-radius:8px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+.visit-map iframe{width:100%;height:100%;border:0}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:80px 24px 40px;color:rgba(255,255,255,0.8)}
+.footer-wrap{max-width:1280px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px;margin-bottom:60px}
+.fg-brand-name{font-family:var(--display);font-size:18px;color:#fff;letter-spacing:0.1em;margin-bottom:8px}
+.fg-brand-sub{font-size:9px;text-transform:uppercase;letter-spacing:0.2em;color:var(--teal-light);margin-bottom:20px}
+.fg-brand-p{font-size:14px;line-height:1.6;color:rgba(255,255,255,0.5);font-weight:300}
+.fg-col-label{font-size:10px;text-transform:uppercase;letter-spacing:0.2em;color:var(--gold);font-weight:600;margin-bottom:30px}
+.fg-item{display:flex;gap:15px;margin-bottom:25px}
+.fg-ico{font-size:16px}
+.fg-t{font-size:12px;font-weight:500;color:#fff;margin-bottom:5px}
+.fg-s{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.5}
+.fg-s a:hover{color:var(--teal-light)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.05);padding-top:30px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;
+}
+.footer-bottom-left{display:flex;align-items:center;gap:16px}
+.fb-copy{font-size:11px;color:rgba(255,255,255,0.3)}
+.fb-right{display:flex;align-items:center;gap:20px}
+.fb-conf{font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--teal-light);font-weight:500}
+.fb-link{font-size:11px;color:rgba(255,255,255,0.3)}
+.fb-link:hover{color:#fff}
+
+/* ── FLOATING BUTTONS ── */
+.float-wrap{position:fixed;bottom:20px;right:20px;z-index:99;display:flex;flex-direction:column;gap:10px}
+.fl-btn{
+  display:flex;align-items:center;justify-content:center;
+  height:48px;padding:0 20px;border-radius:30px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.3);transition:all .2s;
+  font-size:12px;font-weight:500;gap:10px;
+}
+.fl-wa{background:#22c55e;color:#fff}
+.fl-call{background:#fff;color:var(--ink)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero-wrap{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .hero-eyebrow{justify-content:center}
+  .hero-p{margin-left:auto;margin-right:auto}
+  .hero-actions{justify-content:center}
+  .hero-card{max-width:450px}
+  .cred-grid{grid-template-columns:1fr}
+  .promise-body{grid-template-columns:1fr}
+  .outcomes-grid{grid-template-columns:1fr}
+  .outcome-item:nth-child(odd){padding-right:0;border-right:none}
+  .outcome-item:nth-child(even){padding-left:0}
+  .outcome-item:nth-last-child(-n+2){border-bottom:1px solid var(--rule)}
+  .outcome-item:last-child{border-bottom:none}
+  #outcomes::before{display:none}
+  .footer-grid{grid-template-columns:1fr;gap:40px}
+}
+@media(max-width:640px){
+  nav{height:64px}
+  .nav-wa span,.nav-call span{display:none}
+  .nav-logo .nav-name{font-size:13px}
+  .hero-h1{font-size:34px}
+  .btn-primary,.btn-outline{width:100%}
+  .hstat-n{font-size:22px}
+  .visit-map{height:300px}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+  #outcomes{padding:80px 20px}
+  #commitment{padding:80px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-wrap">
+    <div class="nav-logo">
+      <span class="nav-name">Dr. Janak Maniar</span>
+      <span class="nav-sub">HIV Medicine &amp; Research</span>
+    </div>
+    <div class="nav-btns">
+      <a href="https://wa.me/919820440613" class="nav-wa">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+      <a href="tel:+919820440613" class="nav-call">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        <span>Call Clinic</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-texture"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-wrap">
+    <div>
+      <div class="hero-eyebrow">
+        <span class="hero-dot"></span>
+        40 Years of Pioneering Care
+      </div>
+      <h1 class="hero-h1">
+        Confidential HIV care—built on expertise, delivered with <em>dignity</em>.
+      </h1>
+      <p class="hero-p">
+        Guided by the physician who helped shape India's national HIV treatment standards. A private sanctuary for health, clarity, and long-term wellness.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+919820440613" class="btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Get on call with doctor
+        </a>
+        <a href="https://wa.me/919820440613" class="btn-outline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+         Ask Your Questions on WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-portrait">
+        <img loading="lazy" src="https://raw.githubusercontent.com/AnujAhinave/drmaniar/main/drmaniar%20(1).jpg" alt="Dr. Janak Maniar">
+        <div class="portrait-label">Dr. Janak Maniar</div>
+        <div class="portrait-quote">"One of the first to identify HIV-2 in India, December 1990"</div>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat">
+          <div class="hstat-n">50+</div>
+          <div class="hstat-l">Years in<br>HIV Medicine</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-n">NACO</div>
+          <div class="hstat-l">National<br>Guidelines Author</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDIBILITY -->
+<section id="credibility">
+  <div class="cred-wrap">
+    <div class="cred-label">Why Patients Choose Dr. Maniar</div>
+    <div class="cred-grid">
+      <div class="cred-item">
+        <div class="cred-ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="cred-t">National Influence</div>
+        <p class="cred-p">Authored India's first national guidelines for the management of Clinical HIV/AIDS for NACO.</p>
+      </div>
+      <div class="cred-item">
+        <div class="cred-ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+        </div>
+        <div class="cred-t">Global Leadership</div>
+        <p class="cred-p">Former Regional Director for Asia Pacific (IUSTI), directing clinical standards across the region.</p>
+      </div>
+      <div class="cred-item">
+        <div class="cred-ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="6"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div class="cred-t">Lifetime Honour</div>
+        <p class="cred-p">Recipient of the Lifetime Achievement Award (2008) for outstanding contributions to HIV Medicine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section id="promise">
+  <div class="promise-wrap">
+    <div class="promise-chip">The Physician's Promise</div>
+    <blockquote class="promise-q">
+      "Over the years, I've treated patients from all walks of life. Your identity—whether <strong>LGBTQ+ or otherwise</strong>—does not change the way you are treated here."
+    </blockquote>
+    <div class="promise-body">
+      <p class="promise-pp">You will receive the same respect, the same confidentiality, and the same standard of care as every other patient.</p>
+      <p class="promise-pp"><strong>My role is not to judge. My role is to help you move forward with clarity.</strong></p>
+    </div>
+    <div class="promise-sig">
+      <span class="promise-author">Dr. Janak Maniar</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-wrap">
+    <div class="services-head">
+      <div class="eyebrow">Clinical Expertise</div>
+      <h2>Comprehensive<br>Care <em>Matrix</em></h2>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-card-header">
+          <span class="svc-num">01</span>
+          <div class="svc-t">Primary Management</div>
+        </div>
+        <ul class="svc-list">
+          <li><span>•</span> Long-term treatment planning</li>
+          <li><span>•</span> Viral load &amp; CD4 tracking</li>
+          <li><span>•</span> Drug resistance management</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-card-header">
+          <span class="svc-num">02</span>
+          <div class="svc-t">Complex Cases</div>
+        </div>
+        <ul class="svc-list">
+          <li><span>•</span> Salvage therapy (Multi-drug resistance)</li>
+          <li><span>•</span> Neuro-AIDS Clinic</li>
+          <li><span>•</span> HIV &amp; Liver/Kidney intersection care</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-card-header">
+          <span class="svc-num">03</span>
+          <div class="svc-t">Parenthood &amp; Family</div>
+        </div>
+        <ul class="svc-list">
+          <li><span>•</span> Safe conception for HIV couples</li>
+          <li><span>•</span> PMTCT (Healthy childbirth outcomes)</li>
+          <li><span>•</span> Relationship &amp; Disclosure counseling</li>
+          <li><span>•</span> Promoting Matrimony</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section id="outcomes">
+  <div class="outcomes-wrap">
+    <div class="outcomes-head">
+      <div class="eyebrow">Your Future</div>
+      <h2>The objective is <em>life</em>—<br>not just survival.</h2>
+      <div class="outcomes-rule"></div>
+    </div>
+    <div class="outcomes-grid">
+      <div class="outcome-item">
+        <div class="o-num">01</div>
+        <div>
+          <div class="o-title">Live a full, normal lifespan</div>
+          <p class="o-text">Achieving a full, normal lifespan through precision viral management and proactive organ health screening.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="o-num">02</div>
+        <div>
+          <div class="o-title">Relationships without fear (U=U)</div>
+          <p class="o-text">Undetectable = Untransmittable. Love and intimacy are fully possible with proper clinical guidance.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="o-num">03</div>
+        <div>
+          <div class="o-title">Healthy, HIV-negative children</div>
+          <p class="o-text">With PMTCT care, the risk of transmission to a child is reduced to near zero.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="o-num">04</div>
+        <div>
+          <div class="o-title">Plan the future with clarity</div>
+          <p class="o-text">Career, family, and long-term goals — your diagnosis does not define or limit your ambitions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- PRICING -->
+<section id="pricing" style="background:var(--cream2);padding:80px 24px;border-bottom:1px solid var(--rule);">
+  <div style="max-width:800px;margin:0 auto;">
+
+    <div style="font-size:9px;letter-spacing:0.28em;text-transform:uppercase;color:var(--teal);font-weight:500;margin-bottom:20px;font-family:var(--sans);display:flex;align-items:center;gap:14px;">
+      Accessible &amp; Thoughtful Pricing
+      <span style="flex:1;height:1px;background:rgba(26,140,120,0.2);max-width:80px;display:block;"></span>
+    </div>
+
+    <h2 style="font-family:var(--serif);font-size:clamp(26px,3.5vw,38px);color:var(--ink);margin-bottom:20px;font-weight:400;line-height:1.2;">
+      Healthcare that remains <em style="font-style:italic;color:var(--teal);">within reach</em>.
+    </h2>
+
+    <p style="font-size:15px;color:var(--ink-soft);line-height:1.8;margin-bottom:32px;font-family:var(--serif);font-weight:400;max-width:640px;">
+      Our approach to pricing is guided by fairness, discretion, and a commitment to making care accessible to every individual—while maintaining the quality and attention each case deserves.
+    </p>
+
+    <div style="background:white;border:1px solid var(--rule);border-radius:4px;padding:28px 32px;display:inline-flex;align-items:baseline;gap:12px;margin-bottom:32px;">
+      <span style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--teal);font-weight:600;font-family:var(--sans);">Consultation</span>
+      <span style="font-family:var(--serif);font-size:28px;color:var(--ink);font-weight:400;">₹500</span>
+      <span style="font-size:13px;color:var(--muted);font-family:var(--sans);">onwards</span>
+    </div>
+
+    <p style="font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:16px;max-width:600px;">
+      Fees may vary based on individual circumstances, the nature of the concern, and the depth of consultation required. Our approach ensures care remains accessible without compromising quality.
+    </p>
+
+    <p style="font-size:13px;font-style:italic;color:var(--muted);line-height:1.7;max-width:560px;">
+      If cost is a concern, we encourage an open discussion —
+      <strong style="font-style:normal;color:var(--teal);font-weight:500;">care should never feel out of reach.</strong>
+    </p>
+
+  </div>
+</section>
+<!-- COMMITMENT -->
+<section id="commitment">
+  <div class="commit-wrap">
+    <div class="commit-head">A Lifetime of Commitment</div>
+    <div class="commit-q">
+      "This work has never been just a profession—it has been a lifelong commitment.<br><br>
+      Over the years, I have seen the fear, the stigma, and the uncertainty that many patients carry. My aim has always been simple: to replace that fear with clarity, and uncertainty with confidence.<br><br>
+      Here, you will be heard, respected, and guided with honesty. There is no judgment—only a focus on helping you understand your health and move forward with dignity.<br><br>
+      <b>Because every person deserves not just treatment, but understanding, respect, and the freedom to live life fully."</b>
+    </div>
+    <div class="commit-sig">
+      <div class="commit-line"></div>
+      <span class="commit-author">Dr. Janak Maniar</span>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section id="visit">
+  <div class="visit-wrap">
+    <div class="visit-label">Mumbai · South</div>
+    <h2 class="visit-h">Clinic Accessibility</h2>
+    <div class="visit-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d264829.8901453211!2d72.8006954079022!3d19.11552897416691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf8b480a3e61%3A0x465a4c85cc1efe7c!2sDoctor%20J%20K%20Maniar%20Clinic!5e1!3m2!1sen!2sin!4v1778564537240!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="fg-brand-name">Dr. Janak Maniar</div>
+        <div class="fg-brand-sub">HIV Medicine &amp; Research</div>
+        <p class="fg-brand-p">A pioneer in infectious disease and HIV medicine with over 40 years of clinical leadership. Dedicated to providing a high-trust, judgment-free medical sanctuary.</p>
+      </div>
+      <div>
+        <div class="fg-col-label">Clinical Access</div>
+        <div class="fg-item">
+          <span class="fg-ico">📍</span>
+          <div>
+            <div class="fg-t">Consulting Locations</div>
+            <div class="fg-s">Jaslok Hospital, Saifee Hospital, &amp; Bhatia Hospital — Mumbai, Maharashtra.</div>
+          </div>
+        </div>
+        <div class="fg-item">
+          <span class="fg-ico">📞</span>
+          <div>
+            <div class="fg-t">Appointment Line</div>
+            <div class="fg-s"><a href="tel:+919820440613">+91 98204 40613</a></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="fg-col-label">Information</div>
+        <div class="fg-item">
+          <div>
+            <div class="fg-t">Consultation Rate</div>
+            <div class="fg-s" style="font-style:italic">Contact clinic for current schedule of fees and diagnostic rates.</div>
+          </div>
+        </div>
+        <div class="fg-item">
+          <div>
+            <div class="fg-t">Affiliations</div>
+            <div class="fg-s" style="letter-spacing:0.05em;text-transform:uppercase;font-size:11px">IUSTI · NACO · IADVL · UTMB Visiting Faculty</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <span class="fb-copy">© 2026 Dr. Janak Maniar</span>
+        <span class="fb-copy">|</span>
+        <span class="fb-copy">All Rights Reserved</span>
+      </div>
+      <div class="fb-right">
+        <span class="fb-conf">Confidentiality Assured</span>
+        <a href="#" class="fb-link">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-wrap">
+  <a href="https://wa.me/919820440613" class="fl-btn fl-wa">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span>Reach Out on WhatsApp</span>
+  </a>
+  <a href="tel:+919820440613" class="fl-btn fl-call">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    <span>Call Clinic</span>
+  </a>
+</div>
+
+</body>
+</html>
